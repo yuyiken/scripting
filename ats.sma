@@ -1,7 +1,5 @@
 new const PLUGIN_VERSION[] = "1.1"
 
-// Перечислить буквы amxx-флагов, при наличии любого из которых игрок получает
-//		при первом спавне в раунде щипцы и броню
 new const VIP_FLAGS[] = "c"
 
 #include <amxmodx>
@@ -24,7 +22,7 @@ public plugin_init()
     register_concmd("amx_roundrestart", "Cmd_RoundRestart", ADMIN_KICK);
     
     RegisterHookChain(RG_RoundEnd, "OnRoundEnd_Post", true);
-    //register_event("TextMsg", "OnGameRestart", "a", "2&#Game_C", "2&#Game_W");
+    
     RegisterHookChain(RG_CSGameRules_RestartRound, "OnGameRestart");
     
     g_pCvarAtsRounds = create_cvar("amx_atsrounds", "15" , .description = "Number of rounds before action is taken");
