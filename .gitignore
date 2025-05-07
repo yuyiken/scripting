@@ -1,0 +1,11 @@
+# Ignore all files in the root directory
+*.exe
+*.log
+*.dll
+*.dat
+
+# Ignore all files in any directory named temp
+basic plugins/
+compiled/
+include/
+testinclude/
